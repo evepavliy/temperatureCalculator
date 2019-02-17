@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
 
@@ -25,6 +26,9 @@ class ViewController: UIViewController {
     @IBAction func calculate(_ sender: Any) {
         
         self.resignFirstResponder()
+        
+        
+        if CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: textField.text!)) {
         
         if segmentControl.selectedSegmentIndex == 0 {
             let fahr = Double(textField.text!)
@@ -114,7 +118,14 @@ class ViewController: UIViewController {
                 imageView.image = UIImage(named: "Temp1")
             }
             
+          }
+            
+        } else {
+            
+            outputLabel.text = "Number expected"
+            
         }
+        
     }
     
     @IBAction func formatCalculation(_ sender: Any) {

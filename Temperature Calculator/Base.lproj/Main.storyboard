@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="30" id="x3Y-ic-Dxu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="calculate:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="PIg-om-QqT"/>
                                 </connections>
