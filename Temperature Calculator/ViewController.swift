@@ -32,8 +32,87 @@ class ViewController: UIViewController {
             
             outputLabel.text = String(format: "%2.2f" ,cels) + " Celsius"
             
-            //(0°C × 9/5) + 32 = 32°F
-            //(0°F − 32) × 5/9 = -17,78°C
+            if cels > 120 {
+                
+                imageView.image = UIImage(named: "Temp9")
+                
+            } else if cels > 100 {
+                
+                imageView.image = UIImage(named: "Temp8")
+                
+            } else if cels > 80 {
+                
+                imageView.image = UIImage(named: "Temp7")
+                
+            } else if cels > 60 {
+                
+                imageView.image = UIImage(named: "Temp6")
+                
+            } else if cels > 40 {
+                
+                imageView.image = UIImage(named: "Temp5")
+                
+            } else if cels > 20 {
+                
+                imageView.image = UIImage(named: "Temp4")
+                
+            } else if cels > 0 {
+                
+                imageView.image = UIImage(named: "Temp3")
+                
+            } else if cels > -20 {
+                
+                imageView.image = UIImage(named: "Temp2")
+                
+            } else if cels < -20 {
+                
+                imageView.image = UIImage(named: "Temp1")
+            }
+           
+        }
+        
+        if segmentControl.selectedSegmentIndex == 1 {
+            let cels = Double(textField.text!)
+            let fahr = (cels! * (9/5) ) + 32
+            
+            outputLabel.text = String(format: "%2.2f" ,fahr) + " Fahrenheit"
+            
+            if fahr > 160 {
+                
+                imageView.image = UIImage(named: "Temp9")
+                
+            } else if fahr > 140 {
+                
+                imageView.image = UIImage(named: "Temp8")
+                
+            } else if fahr > 120 {
+                
+                imageView.image = UIImage(named: "Temp7")
+                
+            } else if fahr > 100 {
+                
+                imageView.image = UIImage(named: "Temp6")
+                
+            } else if fahr > 80 {
+                
+                imageView.image = UIImage(named: "Temp5")
+                
+            } else if fahr > 60 {
+                
+                imageView.image = UIImage(named: "Temp4")
+                
+            } else if fahr > 40 {
+                
+                imageView.image = UIImage(named: "Temp3")
+                
+            } else if fahr > 20 {
+                
+                imageView.image = UIImage(named: "Temp2")
+                
+            } else if fahr < 20 {
+                
+                imageView.image = UIImage(named: "Temp1")
+            }
             
         }
     }

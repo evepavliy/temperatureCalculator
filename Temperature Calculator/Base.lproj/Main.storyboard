@@ -65,7 +65,7 @@
                                     <action selector="formatCalculation:" destination="BYZ-38-t0r" eventType="valueChanged" id="3iB-D5-uPH"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Celsius" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efe-yB-3DM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Celsius" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="efe-yB-3DM">
                                 <rect key="frame" x="16" y="538" width="343" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="qkc-ZJ-R07"/>
