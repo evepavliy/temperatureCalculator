@@ -36,15 +36,17 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="drg-Ju-OEE">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="drg-Ju-OEE">
                                 <rect key="frame" x="16" y="218" width="343" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.88736569190000003" blue="0.66838315039999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="x3Y-ic-Dxu"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="PIg-om-QqT"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Temp1" translatesAutoresizingMaskIntoConstraints="NO" id="ABk-ly-l69">
                                 <rect key="frame" x="16" y="256" width="343" height="280"/>
@@ -55,10 +57,13 @@
                                     <constraint firstAttribute="height" constant="27" id="SL1-DR-vZe"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Calculate to C"/>
+                                    <segment title="Calculate to F"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="formatCalculation:" destination="BYZ-38-t0r" eventType="valueChanged" id="3iB-D5-uPH"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Celsius" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efe-yB-3DM">
                                 <rect key="frame" x="16" y="538" width="343" height="56"/>
@@ -94,6 +99,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="enterLabel" destination="Hwi-5S-cau" id="iJn-CO-tGu"/>
+                        <outlet property="imageView" destination="ABk-ly-l69" id="tyR-M4-czd"/>
+                        <outlet property="outputLabel" destination="efe-yB-3DM" id="5j1-Sy-S9P"/>
+                        <outlet property="segmentControl" destination="bmo-1b-9B9" id="Vdf-I2-ouk"/>
+                        <outlet property="textField" destination="drg-Ju-OEE" id="8GR-xl-O5O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
