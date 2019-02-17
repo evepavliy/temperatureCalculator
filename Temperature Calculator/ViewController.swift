@@ -23,6 +23,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculate(_ sender: Any) {
+        
+        self.resignFirstResponder()
+        
+        if segmentControl.selectedSegmentIndex == 0 {
+            let fahr = Double(textField.text!)
+            let cels = (fahr! - 32)*(5/9)
+            
+            outputLabel.text = String(cels)
+            
+            //(0°C × 9/5) + 32 = 32°F
+            //(0°F − 32) × 5/9 = -17,78°C
+            
+        }
     }
     
     @IBAction func formatCalculation(_ sender: Any) {
